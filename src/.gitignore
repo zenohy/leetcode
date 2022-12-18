@@ -1,0 +1,11 @@
+.idea/
+*.ipr
+*.iml
+*.iws
+*.class
+**/out/
+*.jar
+*.war
+*.zip
+*.tar
+temp/
