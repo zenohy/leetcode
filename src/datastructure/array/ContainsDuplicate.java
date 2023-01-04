@@ -1,6 +1,8 @@
 package datastructure.array;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * containsDuplicate
@@ -33,7 +35,7 @@ import java.util.Arrays;
 public class ContainsDuplicate {
 
     /**
-     *
+     * 工程操作. 快,编写简单.
      * @param nums
      * @return
      */
@@ -41,5 +43,21 @@ public class ContainsDuplicate {
         long size = nums.length;
         long disctinctSize = Arrays.stream(nums).distinct().count();
         return size == disctinctSize ? false : true;
+    }
+
+    /**
+     * 通过HashSet来实现,这样在时间复杂度上能达到1
+     * @param nums
+     * @return
+     */
+    public boolean containsDuplicateWithHashMap(int[] nums) {
+        Set<Integer> set = new HashSet<Integer>();
+        for (int x : nums) {
+            if (!set.add(x)) {
+                return true;
+            }
+        }
+        return false;
+
     }
 }
