@@ -8,7 +8,7 @@ public class ContainsDuplicateTest {
 
     @Test
     public void containsDuplicateWithHashMap() {
-        var dup=new ContainsDuplicate();
+        var dup=new ContainsDuplicate_217();
         var rs1=dup.containsDuplicateWithHashMap(new int[]{1, 2, 3});
         var rs2=dup.containsDuplicateWithHashMap(new int[]{1, 2, 1,3});
         Assert.assertFalse(rs1);
